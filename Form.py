@@ -11,6 +11,7 @@ Label(a,text="Clas", font="algerian 16", fg="black").place(x=120, y=225)
 Label(a,text="Session", font="algerian 16", fg="black").place(x=320, y=225)
 Label(a,text="School Name", font="algerian 16", fg="black").place(x=570, y=225)
 Label(a,text="Contact No.", font="algerian 16", fg="black").place(x=120, y=275)
+Label(a,text="Blood Group", font="algerian 16", fg="black").place(x=450, y=275)
 
 
 nm=StringVar()
@@ -21,7 +22,7 @@ se=StringVar()
 se1=StringVar()
 scl=StringVar()
 cn=StringVar()
-
+bg=StringVar()
 #Combobox
 
 #Name
@@ -67,7 +68,21 @@ session.current()
 scl1=Entry(a,bd='3',textvariable=cn)
 scl1.place(x=740,y=225)
 
+#Contact N0.
 cn1=Entry(a,bd="2",textvariable=cn)
 cn1.place(x=300,y=275)
 
+#Blood Group
+bg=StringVar()
+Blood  = ttk.Combobox(a, width = 10, textvariable = bg)
+Blood ['values'] = (' A+'
+                    ' B+'
+                    ' O+'
+                    ' O-'
+                    ' AB+'
+                    ' AB-')
+                     
+                     
+Blood .place(x=630,y=275)
+Blood.current()
 mainloop()
